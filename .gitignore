@@ -13,3 +13,18 @@ packages/database/generated/
 .env.development
 .env.production
 .env.test
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Test coverage
+coverage/
+
+# IDE
+.idea/
+*.swp
+*.swo
