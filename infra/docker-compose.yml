@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: loadforge-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: loadforge
+      POSTGRES_PASSWORD: loadforge
+      POSTGRES_DB: loadforge
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U loadforge -d loadforge"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
