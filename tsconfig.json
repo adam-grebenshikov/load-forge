@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": true
+  },
+  "include": [],
+  "references": [
+    {
+      "path": "packages/common"
+    },
+    {
+      "path": "packages/database"
+    }
+  ]
+}
