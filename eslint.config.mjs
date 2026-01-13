@@ -18,3 +18,20 @@ export default tseslint.config(
       "eslint.config.mjs",
     ],
   },
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: __dirname,
+        allowDefaultProject: ["*.mjs"],
+      },
+    },
+  },
+  {
+    plugins: { prettier: eslintPluginPrettier },
+    rules: { "prettier/prettier": "error" },
+  },
+  eslintConfigPrettier
+);
