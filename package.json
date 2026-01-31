@@ -4,19 +4,12 @@
   "private": true,
   "description": "Distributed load testing platform (LoadForge)",
   "scripts": {
-    "build": "pnpm -r run build",
-    "typecheck": "pnpm -r run typecheck",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "prepare": "husky config/husky",
-    "docker:up": "docker compose -f infra/docker-compose.yml up -d",
-    "docker:down": "docker compose -f infra/docker-compose.yml down",
+    "db:up": "docker compose -f deploy/docker-compose.yml up -d",
+    "db:migrate:dev": "pnpm --filter @loadforge/database run db:migrate && pnpm db:generate",
+    "db:migrate:create": "pnpm --filter @loadforge/database run db:migrate:create",
     "db:generate": "pnpm --filter @loadforge/database run db:generate",
-    "db:migrate": "pnpm --filter @loadforge/database exec prisma migrate dev && pnpm db:generate",
-    "db:studio": "pnpm --filter @loadforge/database exec prisma studio",
-    "start:api": "pnpm --filter @loadforge/api-gateway run start",
-    "build:api": "pnpm --filter @loadforge/api-gateway run build"
+    "db:studio": "pnpm --filter @loadforge/database run db:studio",
+    "api:dev": "pnpm --filter @loadforge/api-gateway run start:dev"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
