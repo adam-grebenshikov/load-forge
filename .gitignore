@@ -1,0 +1,15 @@
+# Dependencies (see pnpm-workspace.yaml)
+node_modules/
+
+# Build output
+dist/
+packages/database/generated/
+*.tsbuildinfo
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
