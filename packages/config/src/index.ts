@@ -21,6 +21,14 @@ const schema = {
     default: "development",
     choices: ["development", "test", "production"],
   }),
+  PORT: str({
+    default: "3000",
+    desc: "HTTP server port",
+  }),
+  CORS_ORIGINS: str({
+    default: "*",
+    desc: "Comma-separated CORS allowed origins (e.g. https://app.loadforge.io,http://localhost:3000)",
+  }),
 } as const;
 
 export const config = cleanEnv(process.env, schema);
