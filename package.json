@@ -14,7 +14,9 @@
     "docker:down": "docker compose -f infra/docker-compose.yml down",
     "db:generate": "pnpm --filter @loadforge/database run db:generate",
     "db:migrate": "pnpm --filter @loadforge/database exec prisma migrate dev && pnpm db:generate",
-    "db:studio": "pnpm --filter @loadforge/database exec prisma studio"
+    "db:studio": "pnpm --filter @loadforge/database exec prisma studio",
+    "start:api": "pnpm --filter @loadforge/api-gateway run start",
+    "build:api": "pnpm --filter @loadforge/api-gateway run build"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
