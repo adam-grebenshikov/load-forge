@@ -4,6 +4,7 @@
   "private": true,
   "description": "Distributed load testing platform (LoadForge)",
   "scripts": {
+    "prepare": "husky",
     "db:up": "docker compose -f deploy/docker-compose.yml up -d",
     "db:migrate:dev": "pnpm --filter @loadforge/database run db:migrate && pnpm db:generate",
     "db:migrate:create": "pnpm --filter @loadforge/database run db:migrate:create",
