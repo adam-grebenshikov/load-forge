@@ -21,9 +21,13 @@ const schema = {
     default: "development",
     choices: ["development", "test", "production"],
   }),
-  PORT: str({
+  GATEWAY_PORT: str({
     default: "3000",
-    desc: "HTTP server port",
+    desc: "Gateway HTTP port",
+  }),
+  AUTH_PORT: str({
+    default: "3001",
+    desc: "Auth service HTTP port",
   }),
   CORS_ORIGINS: str({
     default: "*",

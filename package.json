@@ -10,7 +10,8 @@
     "db:migrate:create": "pnpm --filter @loadforge/database run db:migrate:create",
     "db:generate": "pnpm --filter @loadforge/database run db:generate",
     "db:studio": "pnpm --filter @loadforge/database run db:studio",
-    "api:dev": "pnpm --filter @loadforge/api-gateway run start:dev"
+    "gateway:dev": "pnpm --filter @loadforge/gateway run start:dev",
+    "auth:dev": "pnpm --filter @loadforge/auth run start:dev"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
