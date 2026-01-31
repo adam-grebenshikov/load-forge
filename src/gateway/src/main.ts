@@ -13,8 +13,9 @@ import { ValidationPipe } from "@nestjs/common";
 
 import helmet from "@fastify/helmet";
 
+import { HttpExceptionFilter } from "@loadforge/common";
+
 import { AppModule } from "./app.module";
-import { HttpExceptionFilter } from "./common/filters/http-exception.filter";
 
 async function bootstrap() {
   const corsOrigins = config.CORS_ORIGINS.split(",").map((s) => s.trim());

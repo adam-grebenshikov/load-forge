@@ -10,6 +10,8 @@ import {
 
 import { ValidationPipe } from "@nestjs/common";
 
+import { HttpExceptionFilter } from "@loadforge/common";
+
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
@@ -20,6 +22,7 @@ async function bootstrap() {
 
   app.setGlobalPrefix("api/v1");
 
+  app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,

@@ -1,4 +1,4 @@
 export {
   HttpExceptionFilter,
   type ProblemDetails,
-} from "./nest/http-exception.filter";
+} from "./http-exception.filter";

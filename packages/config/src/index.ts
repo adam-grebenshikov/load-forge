@@ -29,6 +29,10 @@ const schema = {
     default: "3001",
     desc: "Auth service HTTP port",
   }),
+  JWT_SECRET: str({
+    default: "change-me-in-production",
+    desc: "JWT signing secret",
+  }),
   CORS_ORIGINS: str({
     default: "*",
     desc: "Comma-separated CORS allowed origins (e.g. https://app.loadforge.io,http://localhost:3000)",
