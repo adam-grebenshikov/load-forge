@@ -12,6 +12,7 @@
     "prepare": "husky config/husky",
     "docker:up": "docker compose -f infra/docker-compose.yml up -d",
     "docker:down": "docker compose -f infra/docker-compose.yml down",
+    "db:generate": "pnpm --filter @loadforge/database run db:generate",
     "db:migrate": "pnpm --filter @loadforge/database exec prisma migrate dev && pnpm db:generate",
     "db:studio": "pnpm --filter @loadforge/database exec prisma studio"
   },

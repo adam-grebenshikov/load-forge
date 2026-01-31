@@ -1,4 +1,4 @@
-# Dependencies (see pnpm-workspace.yaml)
+# Dependencies
 node_modules/
 
 # Build output
@@ -6,40 +6,11 @@ dist/
 packages/database/generated/
 *.tsbuildinfo
 
-# Environment and secrets
-.env
-.env.local
-.env.*.local
-.env.development
-.env.production
-.env.test
-
 # Logs
 npm-debug.log*
 pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 *.log
 
-# Test coverage
-coverage/
-
-# IDE
-.idea/
-*.swp
-*.swo
-*~
-.vscode
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Local / temp
-tmp/
-temp/
-.rewrite-src/
-*.tmp
-.cache/
-
 # Project
+docs/
+.vscode
